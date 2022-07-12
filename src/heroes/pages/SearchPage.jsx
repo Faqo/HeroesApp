@@ -1,5 +1,5 @@
 export const SearchPage = () => {
   return (
-    <div>SearchPage</div>
+    <h1>SearchPage</h1>
   )
 }
