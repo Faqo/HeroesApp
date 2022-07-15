@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 export const PrivateRoute = ({ children }) => {
 
-    const { state } = useContext(AuthContext);
+    const { logged } = useContext(AuthContext);
 
     const {pathname, search} = useLocation()
 
@@ -14,7 +14,7 @@ export const PrivateRoute = ({ children }) => {
 
     //se podria agregar un useMemo para que no re renderice el componente pero no es parte del curso hacerlo.
 
-    return (state.logged)
+    return (logged)
         ? children
         : <Navigate to="/login" />
 }   
